@@ -2,6 +2,12 @@
 #include <physical_layouts.dtsi>
 #include <dt-bindings/led/led.h>
 #include <dt-bindings/pwm/pwm.h>
+#include "rgb.dtsi"
+
+
+#include "trackball.dtsi"
+
+
 
 #include "sofle_trackball_physical_layout.dtsi"
 
