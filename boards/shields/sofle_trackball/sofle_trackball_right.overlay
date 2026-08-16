@@ -123,6 +123,7 @@ nice_view_spi: &spi0 {
             low-power-enable;
         };
     };
+ };
 
 &pinctrl {
     // Other Pinctrl definitions go here
