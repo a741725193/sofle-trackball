@@ -32,7 +32,9 @@ backlight: pwmleds {
 
 };
 
-
+&pwm0 {
+    status = "okay";
+};
 &kscan0 {
     row-gpios
                 = <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
