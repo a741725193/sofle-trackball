@@ -1,0 +1,92 @@
+parse_config:
+  zmk_keycode_map:
+    EXCL: "!"
+    AT: "@"
+    HASH: "#"
+    DLLR: "$"
+    PRCNT: "%"
+    CARET: "^"
+    AMPS: "&"
+    ASTRK: "*"
+    LPAR: "("
+    RPAR: ")"
+    MINUS: "-"
+    PLUS: "+"
+    UNDER: "_"
+    EQUAL: "="
+    FSLH: "/"
+    BSLH: "\\"
+    PIPE: "|"
+    SEMI: ";"
+    COLON: ":"
+    SQT: "'"
+    DQT: '"'
+    LBKT: "["
+    RBKT: "]"
+    LBRC: "{"
+    RBRC: "}"
+    GRAVE: "`"
+    TILDE: "~"
+    N1: "1"
+    N2: "2"
+    N3: "3"
+    N4: "4"
+    N5: "5"
+    N6: "6"
+    N7: "7"
+    N8: "8"
+    N9: "9"
+    N0: "0"
+    SPACE: "␣"
+    ENTER: "⏎"
+    RET: "⏎"
+    TAB: "⇥"
+    ESC: "⎋"
+    BSPC: "⌫"
+    DEL: "⌦"
+    CAPS: "⇪"
+    UP: "↑"
+    DOWN: "↓"
+    LEFT: "←"
+    RIGHT: "→"
+    LSHFT: "⇧"
+    RSHFT: "⇧"
+    LCTRL: "⌃"
+    RCTRL: "⌃"
+    LALT: "⌥"
+    RALT: "⌥"
+    LGUI: "⌘"
+    RGUI: "⌘"
+    C_VOL_UP: "🔊"
+    C_VOL_DN: "🔉"
+    C_MUTE: "🔇"
+    C_NEXT: "⏭"
+    C_PREV: "⏮"
+    C_PP: "⏯"
+    BT_SEL: "📶"
+    BT_CLR: "🔌"
+    BT_CLR_ALL: "🔌"
+    RGB_TOG: "💡"
+    RGB_ON: "💡"
+    RGB_OFF: "🌑"
+    RGB_EFF: "🎨"
+    RGB_EFR: "🎨"
+    RGB_SPI: "🌀"
+    OUT_USB: "🔌"
+    OUT_BLE: "📡"
+
+  raw_binding_map:
+    "&trans":
+      type: trans
+    "&none":
+      type: none
+
+draw_config:
+  svg_extra_style: |
+    svg.keymap {
+      font-family: monospace;
+      font-size: 12px;
+    }
+
+  split_gap: 2
+

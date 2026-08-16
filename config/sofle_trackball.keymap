@@ -1,0 +1,104 @@
+#define BASE 0
+#define LOWER 1
+#define RAISE 2
+#define ADJUST 3
+
+
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+
+
+
+#include <behaviors/runtime-sensor-rotate.dtsi>
+
+
+
+&mmv { time-to-max-speed-ms = <500>; acceleration-exponent = <1>; };
+&msc { time-to-max-speed-ms = <100>; acceleration-exponent = <1>; };
+
+/ {
+    behaviors {
+        rsr_vol: rsr_vol {
+            compatible = "zmk,behavior-runtime-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            tap-ms = <5>;
+            cw-binding = <&kp C_VOL_UP>;
+            ccw-binding = <&kp C_VOL_DN>;
+        };
+    };
+};
+
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+
+        flash {
+            bindings = <&bootloader>;
+            key-positions = <0 13>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        BASE {
+            display-name = "Base";
+            bindings = <
+&kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A
+            &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A
+            &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A
+            &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A
+            &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A &kp A
+            >;
+
+            sensor-bindings = <&rsr_vol>;
+
+        };
+
+        LOWER {
+            display-name = "Lower";
+            bindings = <
+&kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z
+            &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z
+            &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z
+            &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z
+            &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z &kp Z
+            >;
+
+            sensor-bindings = <&rsr_vol>;
+
+        };
+
+        RAISE {
+            display-name = "Raise";
+            bindings = <
+&kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1
+            &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1
+            &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1
+            &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1
+            &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1
+            >;
+
+            sensor-bindings = <&rsr_vol>;
+
+        };
+
+        ADJUST {
+            display-name = "Adjust";
+            bindings = <
+&kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE
+            &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE
+            &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE
+            &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE
+            &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE &kp GRAVE
+            >;
+
+            sensor-bindings = <&rsr_vol>;
+
+        };
+
+    };
+};
