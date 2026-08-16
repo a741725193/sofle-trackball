@@ -22,6 +22,9 @@
     };
 };
 
+&pwm0 {
+    status = "okay";
+};
 
 &kscan0 {
     row-gpios
