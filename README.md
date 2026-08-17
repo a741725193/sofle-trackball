@@ -12,11 +12,7 @@ To flash: drop the appropriate `.uf2` onto each half's USB mass-storage bootload
 
 ## Layout
 
-```
-(filled by keymap_drawer after CI)
-```
-
-(Replace with `keymap_drawer` SVG output after CI runs once.)
+<img src="keymap-drawer/sofle_trackball.svg" />
 
 ## DYA Studio
 
