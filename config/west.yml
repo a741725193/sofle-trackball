@@ -10,6 +10,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: tokyo2006
       url-base: https://github.com/tokyo2006
+    - name: a741725193
+      url-base: https://github.com/a741725193
 
   projects:
     - name: zmk
@@ -64,6 +66,9 @@ manifest:
 
 
     - name: zmk-feature-kscan-diagnostics
+    - name: zmk-board-eyelash
+      remote: a741725193
+      revision: v4.0
 
 
 
