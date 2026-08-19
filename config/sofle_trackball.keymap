@@ -78,7 +78,7 @@
             bindings = <
 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1
             &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1
-            &kp 1 &kp 1 &kp 1 &kp 1 &ext_power &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1
+            &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1
             &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1
             &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1 &kp 1
             >;
