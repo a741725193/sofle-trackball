@@ -1,6 +1,7 @@
 include:
   - board: eyelash_nano
     shield: sofle_trackball_left nice_view
+    snippet: zmk-usb-logging
   - board: eyelash_nano
     shield: sofle_trackball_right nice_view
     snippet: studio-rpc-usb-uart
