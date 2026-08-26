@@ -48,7 +48,6 @@ manifest:
 
     - name: zmk-driver-paw3222-with-custom-studio-rpc
       remote: tokyo2006
-
     - name: zmk-behavior-runtime-sensor-rotate
     - name: zmk-module-ble-management
     - name: zmk-module-battery-history
@@ -63,8 +62,10 @@ manifest:
     - name: zmk-feature-default-layer
       revision: codex/custom-rpc-rewrite
     - name: zmk-feature-os-detection
-
-
+    - name: zmk-feature-runtime-macro
+      import: true
+    - name: zmk-feature-runtime-combo
+      import: true
     - name: zmk-feature-kscan-diagnostics
     - name: zmk-board-eyelash
       remote: a741725193
