@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: sofle_trackball}
 layers:
-  Base: [A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A,
-    A, A, A, A, A, A, A, A, A, A, A, A, A]
+  Base: [ESCAPE, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', BACKSPACE, ⇥, Q, W, E, R, T, Y, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A,
+    A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A, A]
   Lower: [Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z,
     Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, EP ON]
   Raise: ['1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1',
