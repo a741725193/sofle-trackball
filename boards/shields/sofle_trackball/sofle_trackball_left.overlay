@@ -134,7 +134,6 @@ nice_view_spi: &spi0 {
         serial-vcom-interval = <17>;
         idle-vcom-interval = <100>;
         dma-mode;
-        rotate-180;
     };
 };
 
