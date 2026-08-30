@@ -15,6 +15,7 @@
 / {
     chosen {
         zmk,underglow = &led_strip;
+        zephyr,display = &ls013;
     };
 backlight: pwmleds {
     compatible = "pwm-leds";
@@ -93,6 +94,18 @@ nice_view_spi: &spi0 {
     pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
+    ls013: ls013b7dh03@0 {
+        compatible = "sharp,ls0xx-vcom";
+        reg = <0>;
+        spi-max-frequency = <2000000>;
+        width = <128>;
+        height = <128>;
+        serial-vcom-inversion;
+        serial-vcom-interval = <17>;
+        idle-vcom-interval = <100>;
+        dma-mode;
+        rotate-180;
+    };
 };
 
 

@@ -71,6 +71,12 @@ manifest:
       remote: a741725193
       revision: v4.0
 
+    # ---- Peripheral-side display (Sharp LS013B7DH03 on the peripheral half) ----
+    - name: zmk-module-peripheral-display
+      remote: tokyo2006
+    - name: zmk-ls0xxvcom-driver
+      remote: tokyo2006
+
 
 
 
