@@ -20,6 +20,12 @@
     chosen {
         zmk,underglow = &led_strip;
     };
+
+    asdc0: asdc0 {
+        compatible = "zmk,peripheral-display-asdc";
+        channel-id = <1>;
+        status = "okay";
+    };
 backlight: pwmleds {
     compatible = "pwm-leds";
    // pwm_led_0: pwm_led_0 {
