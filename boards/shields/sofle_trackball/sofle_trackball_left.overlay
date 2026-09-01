@@ -137,7 +137,12 @@ nice_view_spi: &spi0 {
         width = <128>;
         height = <128>;
         serial-vcom-inversion;
-        serial-vcom-interval = <17>;
+        /* Diagnostic: was 17ms. The vcom driver's toggle work item and the
+         * LVGL flush path fight over the same SPI bus semaphore (240ms
+         * timeout) every cycle; at 17ms that's ~59 arbitrations/sec forever
+         * while the screen is active. Testing whether relaxing this makes
+         * the ~12.5s freeze go away or shift. */
+        serial-vcom-interval = <100>;
         idle-vcom-interval = <100>;
         dma-mode;
     };
