@@ -137,12 +137,11 @@ nice_view_spi: &spi0 {
         width = <128>;
         height = <128>;
         serial-vcom-inversion;
-        /* Diagnostic: was 17ms. The vcom driver's toggle work item and the
-         * LVGL flush path fight over the same SPI bus semaphore (240ms
-         * timeout) every cycle; at 17ms that's ~59 arbitrations/sec forever
-         * while the screen is active. Testing whether relaxing this makes
-         * the ~12.5s freeze go away or shift. */
-        serial-vcom-interval = <100>;
+        /* Reverted: 17ms -> 100ms only shifted the freeze from ~12.5s to
+         * ~14s, not proportional to the ~6x drop in arbitration frequency,
+         * so this wasn't the cause. Back to the original value while
+         * testing the idle-blanking theory instead. */
+        serial-vcom-interval = <17>;
         idle-vcom-interval = <100>;
         dma-mode;
     };
