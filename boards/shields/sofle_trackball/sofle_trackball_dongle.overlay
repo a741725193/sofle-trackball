@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: MIT
  */
 #include <dt-bindings/zmk/input_transform.h>
-#include <zephyr/dt-bindings/regulator/nrf5x.h>
 #include <input/processors.dtsi>
 #include <input/processors/runtime-input-processor.dtsi>
 #include "sofle_trackball.dtsi"
@@ -41,13 +40,4 @@
 
 &kscan0 {
     status = "disabled";
-};
-
-/* TEMP DIAGNOSTIC: this eyelash_nano board's DTS puts reg1 in DC-DC
- * mode, which needs the matching inductor actually populated. Prospector
- * was originally developed/tested against xiao_ble; if this specific
- * board's power regulation doesn't handle the display's extra current
- * draw well under DC-DC, switching to LDO mode is worth testing. */
-&reg1 {
-    regulator-initial-mode = <NRF5X_REG_MODE_LDO>;
 };
