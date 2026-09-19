@@ -4,8 +4,9 @@ include:
   - board: eyelash_nano
     shield: sofle_trackball_right nice_view
   - board: eyelash_nano
+    # TEMP MINIMAL-REPRO: Studio snippet/cmake-args removed too (they'd
+    # force CONFIG_ZMK_STUDIO=y via -D, overriding the .conf strip-down).
     shield: sofle_trackball_dongle prospector_adapter
-    snippet: studio-rpc-usb-uart zmk-usb-logging
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
+    snippet: zmk-usb-logging
   - board: eyelash_nano
     shield: settings_reset
