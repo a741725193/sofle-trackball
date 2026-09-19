@@ -55,3 +55,7 @@
 &spi3 {
     status = "disabled";
 };
+
+&{/mipi_dbi} {
+    status = "disabled";
+};
