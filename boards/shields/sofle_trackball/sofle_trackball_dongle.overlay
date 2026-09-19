@@ -42,19 +42,7 @@
     status = "disabled";
 };
 
-/* The eyelash_nano board unconditionally wires spi3's pinctrl to these
- * labels for the underglow LED strip. The dongle has no LED strip, but
- * the labels must still resolve, so point them at an unused pin. */
-&pinctrl {
-    spi3_default: spi3_default {
-        group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 0, 11)>;
-        };
-    };
-    spi3_sleep: spi3_sleep {
-        group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 0, 11)>;
-            low-power-enable;
-        };
-    };
-};
+/* spi3's pinctrl (spi3_default/spi3_sleep, required by the eyelash_nano
+ * board regardless of shield) is supplied by the prospector_adapter
+ * shield's own boards/eyelash_nano.overlay, which repurposes spi3 to
+ * drive the Prospector's ST7789V display. */
