@@ -41,12 +41,3 @@
 &kscan0 {
     status = "disabled";
 };
-
-/* TEMP DIAGNOSTIC: P0.10 (the Prospector backlight PWM pin) is the
- * nRF52840's NFC2 antenna pin by default, and nothing in this repo has
- * ever used it as a plain GPIO/PWM pin before (unlike P0.10 on the
- * eyelash_nano board's own spi1_default, which never actually applies
- * since spi1 stays disabled here). Explicitly route NFC pins to GPIO. */
-&uicr {
-    nfct-pins-as-gpios;
-};
