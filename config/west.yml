@@ -70,9 +70,8 @@ manifest:
     - name: zmk-board-eyelash
       remote: a741725193
       revision: v4.0
-    - name: prospector-zmk-module-origin
+    - name: prospector-zmk-module
       remote: tokyo2006
-      revision: feat/new-status-screens
 
 
 

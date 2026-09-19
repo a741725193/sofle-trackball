@@ -6,8 +6,8 @@ include:
   - board: xiao_ble//zmk
     # TEMP: swapped board from eyelash_nano to xiao_ble to test on the
     # hardware Prospector was actually developed/verified against.
-    # Studio snippet/cmake-args still removed (minimal-repro).
     shield: sofle_trackball_dongle prospector_adapter
-    snippet: zmk-usb-logging
+    snippet: studio-rpc-usb-uart zmk-usb-logging
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
   - board: eyelash_nano
     shield: settings_reset
