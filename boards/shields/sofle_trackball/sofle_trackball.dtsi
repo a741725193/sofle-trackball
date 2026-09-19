@@ -2,12 +2,13 @@
 #include <physical_layouts.dtsi>
 #include <dt-bindings/led/led.h>
 #include <dt-bindings/pwm/pwm.h>
-#include "rgb.dtsi"
 
-
-#include "trackball.dtsi"
-
-
+/* rgb.dtsi and trackball.dtsi are NOT included here: this file is shared
+ * by every shield (left/right/dongle), but only left+right have the LED
+ * strip and only right has the PAW3222 physically wired. Each of those
+ * two overlays already includes what it needs directly. Including them
+ * here too used to silently define a phantom LED strip + trackball on
+ * the dongle, which has neither. */
 
 #include "sofle_trackball_physical_layout.dtsi"
 
