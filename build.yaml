@@ -4,9 +4,11 @@ include:
   - board: eyelash_nano
     shield: sofle_trackball_right nice_view
   - board: eyelash_nano
-    # TEMP: prospector_adapter listed first so our own overlay (which
-    # disables &spi3 for a diagnostic test) is applied after it.
-    shield: prospector_adapter sofle_trackball_dongle
+    # prospector_adapter removed: its eyelash_nano pin mapping (from an
+    # unverified WIP branch of tokyo2006/prospector-zmk-module) hangs
+    # the board at a very early, pre-USB stage. Re-add once the correct
+    # pinout for the physical Prospector-on-eyelash_nano wiring is known.
+    shield: sofle_trackball_dongle
     snippet: studio-rpc-usb-uart zmk-usb-logging
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
   - board: eyelash_nano
