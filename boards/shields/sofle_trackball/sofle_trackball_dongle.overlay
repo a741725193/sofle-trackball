@@ -46,3 +46,12 @@
  * board regardless of shield) is supplied by the prospector_adapter
  * shield's own boards/eyelash_nano.overlay, which repurposes spi3 to
  * drive the Prospector's ST7789V display. */
+
+/* TEMP DIAGNOSTIC: disable the ST7789/SPI3 display bus to check whether
+ * its (unverified) pin mapping is what's hanging boot. Requires
+ * build.yaml's shield order to list prospector_adapter BEFORE
+ * sofle_trackball_dongle so this override applies last. Revert once
+ * the display init is confirmed (or not) as the cause. */
+&spi3 {
+    status = "disabled";
+};

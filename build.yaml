@@ -4,7 +4,9 @@ include:
   - board: eyelash_nano
     shield: sofle_trackball_right nice_view
   - board: eyelash_nano
-    shield: sofle_trackball_dongle prospector_adapter
+    # TEMP: prospector_adapter listed first so our own overlay (which
+    # disables &spi3 for a diagnostic test) is applied after it.
+    shield: prospector_adapter sofle_trackball_dongle
     snippet: studio-rpc-usb-uart zmk-usb-logging
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
   - board: eyelash_nano
