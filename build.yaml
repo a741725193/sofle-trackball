@@ -3,9 +3,10 @@ include:
     shield: sofle_trackball_left nice_view
   - board: eyelash_nano
     shield: sofle_trackball_right nice_view
-  - board: eyelash_nano
-    # TEMP MINIMAL-REPRO: Studio snippet/cmake-args removed too (they'd
-    # force CONFIG_ZMK_STUDIO=y via -D, overriding the .conf strip-down).
+  - board: xiao_ble//zmk
+    # TEMP: swapped board from eyelash_nano to xiao_ble to test on the
+    # hardware Prospector was actually developed/verified against.
+    # Studio snippet/cmake-args still removed (minimal-repro).
     shield: sofle_trackball_dongle prospector_adapter
     snippet: zmk-usb-logging
   - board: eyelash_nano
