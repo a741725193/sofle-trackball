@@ -5,8 +5,6 @@
  */
 #include <dt-bindings/zmk/input_transform.h>
 #include <dt-bindings/led/led.h>
-#include <input/processors.dtsi>
-#include <input/processors/runtime-input-processor.dtsi>
 #include <behaviors/battery_history_request.dtsi>
 #include "sofle_trackball.dtsi"
 
@@ -86,12 +84,14 @@ backlight: pwmleds {
 
 
 / {
-    trackball_listener {
-        status = "okay";
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        input-processors = <&mouse_runtime_input_processor>;
-
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+        trackball_split: trackball_split@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+            device = <&trackball>;
+        };
     };
 };
 

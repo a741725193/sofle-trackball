@@ -14,3 +14,4 @@ features:
 siblings:
   - sofle_trackball_left
   - sofle_trackball_right
+  - sofle_trackball_dongle
