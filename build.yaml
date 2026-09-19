@@ -4,9 +4,7 @@ include:
   - board: eyelash_nano
     shield: sofle_trackball_right nice_view
   - board: eyelash_nano
-    # TEMP: prospector_adapter removed to isolate whether the dongle
-    # boots/logs at all without it. Re-add once confirmed working.
-    shield: sofle_trackball_dongle
+    shield: sofle_trackball_dongle prospector_adapter
     snippet: studio-rpc-usb-uart zmk-usb-logging
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
   - board: eyelash_nano
