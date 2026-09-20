@@ -73,7 +73,7 @@ manifest:
       remote: a741725193
       revision: v4.0
     - name: prospector-zmk-module
-      remote: s7venyoung
+      remote: S7venYoung
       revision: core/zephyr-4-1
 
 
