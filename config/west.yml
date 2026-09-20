@@ -12,6 +12,8 @@ manifest:
       url-base: https://github.com/tokyo2006
     - name: a741725193
       url-base: https://github.com/a741725193
+    - name: S7venYoung
+      url-base: https://github.com/S7venYoung
 
   projects:
     - name: zmk
@@ -70,8 +72,9 @@ manifest:
     - name: zmk-board-eyelash
       remote: a741725193
       revision: v4.0
-    - name: zmk-prospector
-      remote: tokyo2006
+    - name: prospector-zmk-module
+      remote: s7venyoung
+      revision: core/zephyr-4-1
 
 
 
