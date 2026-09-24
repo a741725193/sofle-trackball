@@ -32,7 +32,7 @@ jobs:
         run: |
           mkdir -p dfu
           shopt -s nullglob
-          for uf2 in firmware/*nice_nano*.uf2; do
+          for uf2 in firmware/*dongle*.uf2; do
             name=$(basename "$uf2" .uf2)
             python - "$uf2" "dfu/$name.hex" <<'EOF'
           import struct, sys
