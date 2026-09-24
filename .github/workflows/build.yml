@@ -8,3 +8,50 @@ on:
 jobs:
   build:
     uses: cormoran/zmk/.github/workflows/build-user-config.yml@main+dya
+
+  # Large UF2 files often fail to copy completely to nice!nano on macOS,
+  # so also publish serial DFU packages (bootloader SoftDevice S140 6.1.1).
+  dfu:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: firmware
+          path: firmware
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install adafruit-nrfutil
+        run: pip install adafruit-nrfutil intelhex
+
+      - name: Convert nice!nano UF2 to DFU packages
+        shell: bash
+        run: |
+          mkdir -p dfu
+          shopt -s nullglob
+          for uf2 in firmware/*nice_nano*.uf2; do
+            name=$(basename "$uf2" .uf2)
+            python - "$uf2" "dfu/$name.hex" <<'EOF'
+          import struct, sys
+          from intelhex import IntelHex
+          data = open(sys.argv[1], "rb").read()
+          ih = IntelHex()
+          for i in range(0, len(data), 512):
+              _, _, _, addr, size, _, _, _ = struct.unpack("<8I", data[i:i + 32])
+              ih.frombytes(data[i + 32:i + 32 + size], offset=addr)
+          ih.tofile(sys.argv[2], format="hex")
+          EOF
+            adafruit-nrfutil dfu genpkg --dev-type 0x0052 --sd-req 0x00B6 \
+              --application "dfu/$name.hex" "dfu/$name.zip"
+            rm "dfu/$name.hex"
+          done
+          ls -la dfu
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: firmware-dfu
+          path: dfu/*.zip
+          if-no-files-found: error
