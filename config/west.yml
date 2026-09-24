@@ -50,7 +50,6 @@ manifest:
 
     - name: zmk-driver-paw3222-with-custom-studio-rpc
       remote: tokyo2006
-      import: true
     - name: zmk-behavior-runtime-sensor-rotate
       import: true
     - name: zmk-module-ble-management
