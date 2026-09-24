@@ -74,7 +74,7 @@ manifest:
       revision: v4.0
     - name: prospector-zmk-module
       remote: tokyo2006
-      revision: feat/zmk-main-nice-nano
+      revision: main
 
 
 
