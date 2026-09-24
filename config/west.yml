@@ -73,8 +73,8 @@ manifest:
       remote: a741725193
       revision: v4.0
     - name: prospector-zmk-module
-      remote: S7venYoung
-      revision: core/zephyr-4-1
+      remote: tokyo2006
+      revision: feat/zmk-main-nice-nano
 
 
 
