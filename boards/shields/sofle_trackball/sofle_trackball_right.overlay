@@ -141,3 +141,14 @@ nice_view_spi: &spi0 {
         };
     };
 };
+
+// TEST ONLY: disable trackball to check whether it blocks sleep on the right half.
+&trackball {
+    status = "disabled";
+};
+
+/ {
+    trackball_listener {
+        status = "disabled";
+    };
+};
