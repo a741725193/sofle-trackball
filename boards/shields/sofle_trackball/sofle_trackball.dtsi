@@ -5,10 +5,6 @@
 #include "rgb.dtsi"
 
 
-#include "trackball.dtsi"
-
-
-
 #include "sofle_trackball_physical_layout.dtsi"
 
 / {
