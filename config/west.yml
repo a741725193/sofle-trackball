@@ -46,8 +46,9 @@ manifest:
     # ---- ZMK 4.1 DYA feature modules ----
 
 
-    - name: zmk-driver-paw3222-with-custom-studio-rpc
+    - name: tps43-input-module
       remote: tokyo2006
+      revision: main
     - name: zmk-behavior-runtime-sensor-rotate
     - name: zmk-module-ble-management
     - name: zmk-module-battery-history

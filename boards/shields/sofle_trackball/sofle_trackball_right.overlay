@@ -13,7 +13,7 @@
 #include "rgb.dtsi"
 
 
-#include "trackball.dtsi"
+#include "tps43.dtsi"
 
 
 / {
@@ -88,17 +88,6 @@ backlight: pwmleds {
         };
     };
 
-};
-
-
-/ {
-    trackball_listener {
-        status = "okay";
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        input-processors = <&mouse_runtime_input_processor>;
-
-    };
 };
 
 
