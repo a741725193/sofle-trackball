@@ -1,9 +1,16 @@
+/*
+ * PAW3222 trackball on the main/central (right) half.
+ *
+ * SPI1: SCK = P0.11, MOSI = P0.08, MISO = P0.08, CS = P0.07,
+ *       IRQ = P0.12 (active-low, pull-up).
+ */
+#include <zephyr/dt-bindings/gpio/gpio.h>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
 &pinctrl {
     spi1_default: spi1_default {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK,  0,  11)>,
+            psels = <NRF_PSEL(SPIM_SCK, 0, 11)>,
                     <NRF_PSEL(SPIM_MOSI, 0, 8)>,
                     <NRF_PSEL(SPIM_MISO, 0, 8)>;
         };
@@ -11,7 +18,7 @@
 
     spi1_sleep: spi1_sleep {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK,  0,  11)>,
+            psels = <NRF_PSEL(SPIM_SCK, 0, 11)>,
                     <NRF_PSEL(SPIM_MOSI, 0, 8)>,
                     <NRF_PSEL(SPIM_MISO, 0, 8)>;
             low-power-enable;
@@ -32,11 +39,19 @@
         compatible = "cormoran,paw3222";
         reg = <0>;
         spi-max-frequency = <2000000>;
-        irq-gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
+        irq-gpios = <&gpio0 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         cpi = <3200>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
+    };
+};
 
+/ {
+    trackball_listener {
+        status = "okay";
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+        input-processors = <&mouse_runtime_input_processor>;
     };
 };

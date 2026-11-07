@@ -10,12 +10,12 @@ include:
     snippet: studio-rpc-usb-uart trackpad-tps43 peripheral-display-central
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
     artifact-name: sofle_trackball_right-tps43-display
-  # Right half: TPS43 only, without the peripheral display forwarding.
+  # Right half: PAW3222 trackball + forward status to the left display + Studio.
   - board: eyelash_nano
     shield: sofle_trackball_right
-    snippet: studio-rpc-usb-uart trackpad-tps43
+    snippet: studio-rpc-usb-uart trackball-paw3222 peripheral-display-central
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
-    artifact-name: sofle_trackball_right-tps43
+    artifact-name: sofle_trackball_right-trackball-display
   - board: eyelash_nano
     shield: settings_reset
     artifact-name: settings_reset

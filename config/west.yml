@@ -49,6 +49,8 @@ manifest:
     - name: tps43-input-module
       remote: tokyo2006
       revision: main
+    - name: zmk-driver-paw3222-with-custom-studio-rpc
+      remote: tokyo2006
     - name: zmk-behavior-runtime-sensor-rotate
     - name: zmk-module-ble-management
     - name: zmk-module-battery-history
