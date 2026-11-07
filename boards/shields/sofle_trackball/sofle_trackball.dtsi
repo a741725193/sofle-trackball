@@ -5,7 +5,6 @@
 #include "rgb.dtsi"
 
 
-
 #include "sofle_trackball_physical_layout.dtsi"
 
 / {
@@ -62,6 +61,7 @@
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
         diode-direction = "col2row";
+        wakeup-source;
     };
 
 };
