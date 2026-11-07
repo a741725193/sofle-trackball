@@ -124,8 +124,6 @@ static const uint8_t image0_map[] = {
 
 static const lv_img_dsc_t image0 = {
     .header.cf = LV_COLOR_FORMAT_I1,
-    .header.always_zero = 0,
-    .header.reserved = 0,
     .header.w = 128,
     .header.h = 108,
     .data_size = 1736,
@@ -247,8 +245,6 @@ static const uint8_t image1_map[] = {
 
 static const lv_img_dsc_t image1 = {
     .header.cf = LV_COLOR_FORMAT_I1,
-    .header.always_zero = 0,
-    .header.reserved = 0,
     .header.w = 128,
     .header.h = 108,
     .data_size = 1736,
@@ -370,8 +366,6 @@ static const uint8_t image2_map[] = {
 
 static const lv_img_dsc_t image2 = {
     .header.cf = LV_COLOR_FORMAT_I1,
-    .header.always_zero = 0,
-    .header.reserved = 0,
     .header.w = 128,
     .header.h = 108,
     .data_size = 1736,
@@ -493,8 +487,6 @@ static const uint8_t image3_map[] = {
 
 static const lv_img_dsc_t image3 = {
     .header.cf = LV_COLOR_FORMAT_I1,
-    .header.always_zero = 0,
-    .header.reserved = 0,
     .header.w = 128,
     .header.h = 108,
     .data_size = 1736,
@@ -616,8 +608,6 @@ static const uint8_t image4_map[] = {
 
 static const lv_img_dsc_t image4 = {
     .header.cf = LV_COLOR_FORMAT_I1,
-    .header.always_zero = 0,
-    .header.reserved = 0,
     .header.w = 128,
     .header.h = 108,
     .data_size = 1736,
@@ -739,8 +729,6 @@ static const uint8_t image5_map[] = {
 
 static const lv_img_dsc_t image5 = {
     .header.cf = LV_COLOR_FORMAT_I1,
-    .header.always_zero = 0,
-    .header.reserved = 0,
     .header.w = 128,
     .header.h = 108,
     .data_size = 1736,
@@ -862,8 +850,6 @@ static const uint8_t image6_map[] = {
 
 static const lv_img_dsc_t image6 = {
     .header.cf = LV_COLOR_FORMAT_I1,
-    .header.always_zero = 0,
-    .header.reserved = 0,
     .header.w = 128,
     .header.h = 108,
     .data_size = 1736,
@@ -985,8 +971,6 @@ static const uint8_t image7_map[] = {
 
 static const lv_img_dsc_t image7 = {
     .header.cf = LV_COLOR_FORMAT_I1,
-    .header.always_zero = 0,
-    .header.reserved = 0,
     .header.w = 128,
     .header.h = 108,
     .data_size = 1736,
