@@ -1,0 +1,4 @@
+name: trackball-paw3222-peripheral
+append:
+  EXTRA_DTC_OVERLAY_FILE: trackball-paw3222-peripheral.overlay
+  EXTRA_CONF_FILE: trackball-paw3222-peripheral.conf

@@ -1,0 +1,7 @@
+if(CONFIG_ZMK_DISPLAY AND CONFIG_ZMK_DISPLAY_STATUS_SCREEN_CUSTOM)
+  zephyr_library_sources(peripheral_screen.c)
+  zephyr_library_sources(widgets/bolt.c)
+  zephyr_library_sources(widgets/util.c)
+  zephyr_library_sources(widgets/art.c)
+  zephyr_library_sources(widgets/peripheral_status.c)
+endif()

@@ -1,0 +1,4 @@
+name: trackpad-tps43-peripheral
+append:
+  EXTRA_DTC_OVERLAY_FILE: trackpad-tps43-peripheral.overlay
+  EXTRA_CONF_FILE: trackpad-tps43-peripheral.conf

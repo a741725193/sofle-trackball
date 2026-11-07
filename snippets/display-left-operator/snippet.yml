@@ -1,0 +1,4 @@
+name: display-left-operator
+append:
+  EXTRA_DTC_OVERLAY_FILE: display-left-operator.overlay
+  EXTRA_CONF_FILE: display-left-operator.conf

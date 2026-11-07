@@ -1,0 +1,4 @@
+name: trackpad-tps43-central
+append:
+  EXTRA_DTC_OVERLAY_FILE: trackpad-tps43-central.overlay
+  EXTRA_CONF_FILE: trackpad-tps43-central.conf

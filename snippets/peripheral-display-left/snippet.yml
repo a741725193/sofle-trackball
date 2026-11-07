@@ -1,4 +1,0 @@
-name: peripheral-display-left
-append:
-  EXTRA_DTC_OVERLAY_FILE: peripheral-display-left.overlay
-  EXTRA_CONF_FILE: peripheral-display-left.conf

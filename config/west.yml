@@ -80,6 +80,9 @@ manifest:
       revision: feat/operator-theme
     - name: zmk-ls0xxvcom-driver
       remote: tokyo2006
+    - name: prospector-zmk-module
+      remote: tokyo2006
+      revision: main
 
 
 

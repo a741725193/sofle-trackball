@@ -1,0 +1,3 @@
+name: display-left
+append:
+  EXTRA_DTC_OVERLAY_FILE: display-left.overlay

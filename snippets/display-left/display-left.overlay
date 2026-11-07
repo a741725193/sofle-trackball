@@ -1,5 +1,5 @@
 /*
- * Sharp LS013B7DH03 display on the peripheral (left) half.
+ * Sharp LS013B7DH03 display wiring on the peripheral (left) half.
  *
  * SPI0: SCK = P0.20, MOSI = P0.17, MISO = P0.25, CS = P0.06 (active high).
  */
@@ -8,12 +8,6 @@
 / {
     chosen {
         zephyr,display = &ls013;
-    };
-
-    asdc0: asdc0 {
-        compatible = "zmk,peripheral-display-asdc";
-        channel-id = <1>;
-        status = "okay";
     };
 };
 

@@ -1,0 +1,47 @@
+if SHIELD_SOFLE_ROLIO_SCREEN
+
+choice ZMK_DISPLAY_STATUS_SCREEN
+    default ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+endchoice
+
+config ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+    select LV_USE_LABEL
+    select LV_USE_IMAGE
+    select LV_USE_CANVAS
+    select LV_FONT_MONTSERRAT_16
+
+config LV_Z_VDB_SIZE
+    default 100
+
+config LV_DPI_DEF
+    default 148
+
+config LV_Z_BITS_PER_PIXEL
+    default 1
+
+choice LV_COLOR_DEPTH
+    default LV_COLOR_DEPTH_1
+endchoice
+
+choice ZMK_DISPLAY_WORK_QUEUE
+    default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
+endchoice
+
+config LV_Z_MEM_POOL_SIZE
+    default 8192
+
+config LV_Z_FULL_REFRESH
+    default y
+
+config SOFLE_ROLIO_SCREEN_CHARGE_FULL_PCT
+    int "Battery level treated as fully charged"
+    range 1 100
+    default 95
+    help
+      Charging is inferred as USB powered and below this level.
+
+config SOFLE_ROLIO_SCREEN_INVERTED
+    bool "Invert the peripheral screen colors"
+    default n
+
+endif # SHIELD_SOFLE_ROLIO_SCREEN
