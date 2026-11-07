@@ -48,7 +48,7 @@ manifest:
 
     - name: tps43-input-module
       remote: tokyo2006
-      revision: main
+      revision: feat/tps43-split-relay-main
     - name: zmk-driver-paw3222-with-custom-studio-rpc
       remote: tokyo2006
     - name: zmk-behavior-runtime-sensor-rotate

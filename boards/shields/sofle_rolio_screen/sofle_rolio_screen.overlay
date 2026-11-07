@@ -1,0 +1,4 @@
+/*
+ * Display wiring is provided by the keyboard repo's display-left snippet.
+ * This shield only supplies the custom peripheral status screen.
+ */
