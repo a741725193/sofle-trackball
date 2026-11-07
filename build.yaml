@@ -28,12 +28,12 @@ include:
   # Dongle central with Prospector display.
   - board: nice_nano@2.0.0//zmk
     shield: sofle_trackball_dongle prospector_adapter
-    snippet: studio-rpc-usb-uart
+    snippet: studio-rpc-usb-uart dongle-central
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
     artifact-name: sofle_trackball_dongle-nice_nano
   - board: xiao_ble//zmk
     shield: sofle_trackball_dongle prospector_adapter
-    snippet: studio-rpc-usb-uart
+    snippet: studio-rpc-usb-uart dongle-central
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
     artifact-name: sofle_trackball_dongle-xiao_ble
 
