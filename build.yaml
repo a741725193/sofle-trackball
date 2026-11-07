@@ -11,14 +11,14 @@ include:
   # Right half: TPS43 trackpad + forward status to the left display + Studio.
   - board: eyelash_nano
     shield: sofle_trackball_right
-    snippet: studio-rpc-usb-uart trackpad-tps43 trackpad-tps43-central peripheral-display-central
+    snippet: studio-rpc-usb-uart trackpad-tps43 trackpad-tps43-central peripheral-display-central joystick-psp joystick-psp-central
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
     artifact-name: sofle_trackball_right-tps43-display
 
   # Right half: PAW3222 trackball + forward status to the left display + Studio.
   - board: eyelash_nano
     shield: sofle_trackball_right
-    snippet: studio-rpc-usb-uart trackball-paw3222 trackball-paw3222-central peripheral-display-central
+    snippet: studio-rpc-usb-uart trackball-paw3222 trackball-paw3222-central peripheral-display-central joystick-psp joystick-psp-central
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
     artifact-name: sofle_trackball_right-trackball-display
 
@@ -28,12 +28,12 @@ include:
   # Dongle central with Prospector display.
   - board: nice_nano@2.0.0//zmk
     shield: sofle_trackball_dongle prospector_adapter
-    snippet: studio-rpc-usb-uart dongle-central
+    snippet: studio-rpc-usb-uart dongle-central joystick-psp-dongle-central
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
     artifact-name: sofle_trackball_dongle-nice_nano
   - board: xiao_ble//zmk
     shield: sofle_trackball_dongle prospector_adapter
-    snippet: studio-rpc-usb-uart dongle-central
+    snippet: studio-rpc-usb-uart dongle-central joystick-psp-dongle-central
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
     artifact-name: sofle_trackball_dongle-xiao_ble
 
@@ -46,13 +46,13 @@ include:
   # Right peripheral: TPS43 relayed to the dongle central.
   - board: eyelash_nano
     shield: sofle_trackball_right
-    snippet: trackpad-tps43 trackpad-tps43-peripheral peripheral-right
+    snippet: trackpad-tps43 trackpad-tps43-peripheral peripheral-right joystick-psp joystick-psp-peripheral
     artifact-name: sofle_trackball_right-tps43-peripheral
 
   # Right peripheral: PAW3222 relayed to the dongle central.
   - board: eyelash_nano
     shield: sofle_trackball_right
-    snippet: trackball-paw3222 trackball-paw3222-peripheral peripheral-right
+    snippet: trackball-paw3222 trackball-paw3222-peripheral peripheral-right joystick-psp joystick-psp-peripheral
     artifact-name: sofle_trackball_right-trackball-peripheral
 
   - board: eyelash_nano

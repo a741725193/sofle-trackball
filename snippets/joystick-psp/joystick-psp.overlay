@@ -1,0 +1,59 @@
+/*
+ * PSP-1000/2000/3000 analog thumbstick on the main/central (right) half.
+ *
+ * X = P0.05 (AIN3), Y = P0.28 (AIN4), VCC = 3.3 V, GND = GND.
+ *
+ * Matrix column 5 was moved from P0.28 to P0.17 (the unused OLED MOSI pad)
+ * to free P0.28 for the joystick Y axis. See the right-half base overlay.
+ */
+#include <zephyr/dt-bindings/adc/adc.h>
+#include <zephyr/dt-bindings/adc/nrf-adc.h>
+
+&adc {
+    status = "okay";
+    #address-cells = <1>;
+    #size-cells = <0>;
+
+    channel@3 {
+        reg = <3>;
+        zephyr,gain = "ADC_GAIN_1_6";
+        zephyr,reference = "ADC_REF_INTERNAL";
+        zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
+        zephyr,input-positive = <NRF_SAADC_AIN3>;
+        zephyr,resolution = <12>;
+    };
+
+    channel@4 {
+        reg = <4>;
+        zephyr,gain = "ADC_GAIN_1_6";
+        zephyr,reference = "ADC_REF_INTERNAL";
+        zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
+        zephyr,input-positive = <NRF_SAADC_AIN4>;
+        zephyr,resolution = <12>;
+    };
+};
+
+/ {
+    psp_joystick: psp_joystick {
+        compatible = "tokyo2006,psp-joystick";
+        io-channels = <&adc 3>, <&adc 4>;
+        io-channel-names = "x", "y";
+
+        deadzone-percent = <15>;
+        center-x = <1920>;
+        center-y = <1850>;
+        min-x = <653>;
+        max-x = <3280>;
+        min-y = <653>;
+        max-y = <3280>;
+        auto-center = <0>;
+        auto-recenter = <0>;
+        max-speed = <24>;
+        curve-exponent-x100 = <100>;
+        smoothing-percent = <10>;
+        invert-y;
+        arrow-mode = <0>;
+        arrow-threshold-percent = <50>;
+        arrow-layer = <1>;
+    };
+};

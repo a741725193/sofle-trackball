@@ -51,6 +51,9 @@ manifest:
       revision: feat/tps43-split-relay-main
     - name: zmk-driver-paw3222-with-custom-studio-rpc
       remote: tokyo2006
+    - name: zmk-driver-psp-joystick-with-custom-studio-rpc
+      remote: tokyo2006
+      revision: fix/dedicated-workqueue
     - name: zmk-behavior-runtime-sensor-rotate
     - name: zmk-module-ble-management
     - name: zmk-module-battery-history

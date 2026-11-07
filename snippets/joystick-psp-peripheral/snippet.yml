@@ -1,0 +1,4 @@
+name: joystick-psp-peripheral
+append:
+  EXTRA_DTC_OVERLAY_FILE: joystick-psp-peripheral.overlay
+  EXTRA_CONF_FILE: joystick-psp-peripheral.conf
