@@ -1,0 +1,4 @@
+name: peripheral-display-central
+append:
+  EXTRA_DTC_OVERLAY_FILE: peripheral-display-central.overlay
+  EXTRA_CONF_FILE: peripheral-display-central.conf

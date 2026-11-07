@@ -1,0 +1,7 @@
+/ {
+    asdc0: asdc0 {
+        compatible = "zmk,peripheral-display-asdc";
+        channel-id = <1>;
+        status = "okay";
+    };
+};

@@ -4,6 +4,7 @@
  * Pins: SDA = P1.08, SCL = P0.24, RST = P1.04 (active-low),
  *       RDY = P1.07 (active-high).
  */
+#include <zephyr/dt-bindings/gpio/gpio.h>
 
 &pinctrl {
     i2c0_default: i2c0_default {
